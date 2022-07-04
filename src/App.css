@@ -1,38 +1,104 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Titillium+Web&display=swap');
+
+:root {
+  --background-color: #2f3238;
+  --background-color-rgb: 47, 50, 56;
+  font-size: 14px;
+}
+
+body {
+  background-color: #2f3238;
+}
+
+.banner {
+  width: 100%;
+  height: 360px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerText {
+  color: white;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.navbar {
+  background-color: rgb(38, 41, 46);
+  font-family: 'Titillium Web', sans-serif;
+  padding: .5rem 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar * {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.entry-card {
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 200px;
+  color: #fff;
+  margin: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.entry-card:hover img{
+  filter: grayscale(1);
+}
+
+.entry-card:hover .body-card {
+  transform: translateY(-5px);
+}
+
+.entry-card .img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+ .entry-card .img-container::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+} 
+
+.entry-card .card-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  transition: .2s;
+}
+
+.entry-card .body-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  height: 100%;
+  transition: .2s;
+  z-index: 2;
+}
+
+.entry-card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.entry-card .link-entry {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

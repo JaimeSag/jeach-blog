@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import EntryCard from "./components/entry-card";
+import NavBar from "./components/navbar";
 
 function App() {
+  const items = 12;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="banner">
+        <div className="innerText">
+          <h1>Name</h1>
+          <p>Slogan/date/whatever</p>
+        </div>
+      </div>
+      <NavBar />
+      <div className="container">
+        <div className="row g-1">
+          
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+          <EntryCard />
+
+        </div>
+      </div>
     </div>
   );
 }
