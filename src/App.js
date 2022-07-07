@@ -1,32 +1,39 @@
 import "./App.css";
-import EntryCard from "./components/entry-card";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+
 import NavBar from "./components/navbar";
+import SocialBar from "./components/social-bar";
+import Musica from "./pages/musica";
+import Noticias from "./pages/noticias";
+import Entretenimiento from "./pages/entretenimiento";
+import Otros from "./pages/otros";
+import Deportes from "./pages/deportes";
+import Home from "./pages/home";
 
 function App() {
-  const items = 12;
   return (
     <div className="App">
+      <SocialBar />
       <div className="banner">
         <div className="innerText">
-          <h1>Name</h1>
+          <h1>NAME</h1>
           <p>Slogan/date/whatever</p>
         </div>
       </div>
-      <NavBar />
-      <div className="container">
-        <div className="row g-1">
-          
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
-          <EntryCard />
 
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NavBar />}>
+            <Route index element={<Home />} />
+            <Route path="noticias" element={<Noticias />} />
+            <Route path="musica" element={<Musica />} />
+            <Route path="entretenimiento" element={<Entretenimiento />} />
+            <Route path="otros" element={<Otros />} />
+            <Route path="deportes" element={<Deportes />} />
+            <Route path="*" element={<Navigate replace to="/" />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

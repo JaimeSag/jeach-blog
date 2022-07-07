@@ -1,11 +1,11 @@
-function EntryCard() {
+function EntryCard(props) {
   const lorem = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantiumiste repellat vero qui culpa perferendis saepe, quis fugiat adipisciut blanditiis sed eos quibusdam! Veritatis fuga numquam illo aperiamoptio.";
   return (
     <div className=" col-md-6 col-lg-3">
       <div className="entry-card">
         <div className="img-container">
           <img
-            src="https://picsum.photos/500?random=``"
+            src={`https://picsum.photos/500?random=${props.num}`}
             className="card-img"
             alt=""
           />
@@ -16,7 +16,7 @@ function EntryCard() {
           <p className="description">
             {lorem.length > 50 ? `${lorem.slice(0, 50)}... ` : ``}
           </p>
-          <a href="#" className="link-entry"></a>
+          <a href="/" className="link-entry">&nbsp;</a>
         </div>
       </div>
     </div>
