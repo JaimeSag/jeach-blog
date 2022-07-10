@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function EntryCard({blog}) {
   const description = blog.description;
+  const loc = useLocation().pathname;
+
   return (
       <div className="entry-card">
         <div className="img-container">
@@ -17,7 +19,7 @@ function EntryCard({blog}) {
           <p className="description">
             {description.length > 50 ? `${description.slice(0, 50)}... ` : ``}
           </p>
-          <Link to={`${blog.category}/${blog.id}`} className="link-entry">&nbsp;</Link>
+          <Link to={`${loc === '/' ? blog.category : loc}/${blog.id}`} className="link-entry">&nbsp;</Link>
         </div>
       </div>
   );

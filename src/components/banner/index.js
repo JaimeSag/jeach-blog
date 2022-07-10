@@ -1,15 +1,27 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { blogItems } from "../../data";
 
+const initialState = {
+  title: "JEACH",
+  description: "Slogan"
+};
+
 function Banner() {
-  const { id } = useParams();
-  const [blog, setBlog] = useState(null);
+  const location = useLocation()
+  const [blog, setBlog] = useState(initialState);
+  const path = location.pathname.replace("/", "");
 
   useEffect(() => {
-    let blog = blogItems.find((blog) => blog.id === id);
-    if (blog) setBlog(blog);
-  }, []);
+    let blog = {};
+    if (location.pathname != '/'){
+      blog.title = path;
+      setBlog(blog);
+    }else{
+      setBlog(initialState);  
+    }
+    
+  }, [location]);
 
   return (
     <div className="banner">

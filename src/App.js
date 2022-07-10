@@ -23,20 +23,19 @@ function App() {
         <NavBar />
         <Routes>
             <Route index element={<Home blogs={blogItems} />} />
-
-            <Route exact path="noticias" element={<Noticias />} />
+            <Route exact path="noticias" element={<Home blogs={blogItems}/>} />
             <Route path="noticias/:id" element={<Blog />} />
 
-            <Route path="musica" element={<Musica />} />
+            <Route exact path="musica" element={<Home blogs={blogItems}/>} />
             <Route path="musica/:id" element={<Blog />} />
 
-            <Route path="entretenimiento" element={<Entretenimiento />} />
+            <Route exact path="entretenimiento" element={<Home blogs={blogItems}/>} />
             <Route path="entretenimiento/:id" element={<Blog />} />
 
-            <Route path="otros" element={<Otros />} />
+            <Route exact path="otros" element={<Home blogs={blogItems}/>} />
             <Route path="otros/:id" element={<Blog />} />
 
-            <Route path="deportes" element={<Deportes />} />
+            <Route exact path="deportes" element={<Home blogs={blogItems}/>} />
             <Route path="deportes/:id" element={<Blog />} />
 
             <Route path="*" element={<Navigate replace to="/" />}></Route>
