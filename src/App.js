@@ -3,11 +3,6 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import NavBar from "./components/navbar";
 import SocialBar from "./components/social-bar";
-import Musica from "./pages/musica";
-import Noticias from "./pages/noticias";
-import Entretenimiento from "./pages/entretenimiento";
-import Otros from "./pages/otros";
-import Deportes from "./pages/deportes";
 import Home from "./pages/home";
 import Blog from "./components/blog";
 import Banner from "./components/banner";

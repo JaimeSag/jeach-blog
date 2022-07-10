@@ -1,37 +1,35 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useRoutes } from "react-router-dom";
 import { blogItems } from "../../data";
+import  Backaground  from "../../assets/img/Footer.jpg"
 
 const initialState = {
   title: "JEACH",
-  description: "Slogan"
+  description: "Slogan",
+  banner: Backaground
 };
 
 function Banner() {
-  const location = useLocation()
+  const location = useLocation();
+  const lastPath = location.pathname.substring(
+    location.pathname.lastIndexOf("/") + 1
+  );
   const [blog, setBlog] = useState(initialState);
-  const path = location.pathname.replace("/", "");
 
   useEffect(() => {
-    let blog = {};
-    if (location.pathname != '/'){
-      blog.title = path;
-      setBlog(blog);
-    }else{
-      setBlog(initialState);  
-    }
-    
+    let searchBlog = blogItems.find((blog) => blog.id === lastPath);
+    searchBlog ? setBlog(searchBlog) : setBlog(initialState);
   }, [location]);
 
   return (
-    <div className="banner">
+    <div className="banner" style={{backgroundImage: `url(${blog.banner})`}}>
       <div className="innerText">
-         {blog ? (
-        <>
-          <h1>{blog.title}</h1>
-          <p>{blog.description}</p>
-        </>
-      ) : null}
+        {blog ? (
+          <>
+            <h1>{blog.title}</h1>
+            <p>{blog.description}</p>
+          </>
+        ) : null}
       </div>
     </div>
   );
