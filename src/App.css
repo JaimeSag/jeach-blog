@@ -64,8 +64,19 @@ body {
   z-index: 3;
 }
 
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
 .navbar * {
   color: white;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .entry-card {

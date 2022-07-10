@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 const navLinks = [
@@ -57,18 +57,14 @@ function NavBar() {
           <ul className="navbar-nav mr-auto">
             {navLinks.map((element, index) => (
               <li key={index} className="nav-item">
-                <Link className="nav-link" to={element.path}>
+                <NavLink className="nav-link" to={element.path}>
                   {element.title}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
         </div>
       </nav>
-
-      <section>
-        <Outlet></Outlet>
-      </section>
     </>
   );
 }

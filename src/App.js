@@ -9,29 +9,37 @@ import Entretenimiento from "./pages/entretenimiento";
 import Otros from "./pages/otros";
 import Deportes from "./pages/deportes";
 import Home from "./pages/home";
+import Blog from "./components/blog";
+import Banner from "./components/banner";
+import { blogItems } from "./data";
 
 function App() {
   return (
     <div className="App">
       <SocialBar />
-      <div className="banner">
-        <div className="innerText">
-          <h1>NAME</h1>
-          <p>Slogan/date/whatever</p>
-        </div>
-      </div>
 
       <BrowserRouter>
+        <Banner />
+        <NavBar />
         <Routes>
-          <Route path="/" element={<NavBar />}>
-            <Route index element={<Home />} />
-            <Route path="noticias" element={<Noticias />} />
+            <Route index element={<Home blogs={blogItems} />} />
+
+            <Route exact path="noticias" element={<Noticias />} />
+            <Route path="noticias/:id" element={<Blog />} />
+
             <Route path="musica" element={<Musica />} />
+            <Route path="musica/:id" element={<Blog />} />
+
             <Route path="entretenimiento" element={<Entretenimiento />} />
+            <Route path="entretenimiento/:id" element={<Blog />} />
+
             <Route path="otros" element={<Otros />} />
+            <Route path="otros/:id" element={<Blog />} />
+
             <Route path="deportes" element={<Deportes />} />
+            <Route path="deportes/:id" element={<Blog />} />
+
             <Route path="*" element={<Navigate replace to="/" />}></Route>
-          </Route>
         </Routes>
       </BrowserRouter>
     </div>

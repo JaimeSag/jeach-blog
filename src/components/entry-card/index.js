@@ -1,25 +1,25 @@
-function EntryCard(props) {
-  const lorem = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantiumiste repellat vero qui culpa perferendis saepe, quis fugiat adipisciut blanditiis sed eos quibusdam! Veritatis fuga numquam illo aperiamoptio.";
+import { Link } from "react-router-dom";
+
+function EntryCard({blog}) {
+  const description = blog.description;
   return (
-    <div className=" col-md-6 col-lg-3">
       <div className="entry-card">
         <div className="img-container">
           <img
-            src={`https://picsum.photos/500?random=${props.num}`}
+            src={`https://picsum.photos/500?random=${blog.num}`}
             className="card-img"
             alt=""
           />
         </div>
 
         <div className="body-card">
-          <h2 className="title">Entry title</h2>
+          <h2 className="title">{blog.title}</h2>
           <p className="description">
-            {lorem.length > 50 ? `${lorem.slice(0, 50)}... ` : ``}
+            {description.length > 50 ? `${description.slice(0, 50)}... ` : ``}
           </p>
-          <a href="/" className="link-entry">&nbsp;</a>
+          <Link to={`${blog.category}/${blog.id}`} className="link-entry">&nbsp;</Link>
         </div>
       </div>
-    </div>
   );
 }
 

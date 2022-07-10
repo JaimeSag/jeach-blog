@@ -1,14 +1,17 @@
 import EntryCard from "../../components/entry-card";
 
-function Home() {
-  const items = [];
-  for (let i = 0; i < 12; i++) items.push(<EntryCard num={i}/>);
-
+function Home({ blogs }) {
   return (
     <div>
       <div className="container">
         <h1>Home</h1>
-        <div className="row g-1">{items}</div>
+        <div className="cards-grid">
+          {(blogs.map((element, index) => (
+            
+            <EntryCard blog={element} key={index} />
+            
+          )))}
+        </div>
       </div>
     </div>
   );
