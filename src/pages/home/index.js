@@ -1,25 +1,19 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import EntryCard from "../../components/entry-card";
+import './styles.css';
 
 function Home({ blogs }) {
-  const loc = useLocation();
   const [blogsx, setBlogsx] = useState(blogs);
-  const path = loc.pathname.replace("/", "");
 
   useEffect(() => {
-    if (loc.pathname != '/'){
-      let blop = blogs.filter((blogs) => blogs.category === path);
-      if (blop) setBlogsx(blop);
-    }else{
-      setBlogsx(blogs)
-    }
-  }, [loc, blogs]);
+    setBlogsx(blogs)
+    document.title = `Blog | Noticias, música, entretenimiento y más`;
+  }, [blogs]);
 
   return (
     <div>
       <div className="container">
-        <h1>{path}</h1>
+        <h1>Home</h1>
         <div className="cards-grid">
           {blogsx.map((element, index) => (
             <EntryCard blog={element} key={index} />
