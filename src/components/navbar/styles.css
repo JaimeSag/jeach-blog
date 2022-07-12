@@ -1,0 +1,22 @@
+.navbar {
+  background-color: rgb(38, 41, 46);
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail-image {
+  position: relative;
+}
+
+.navbar * {
+  color: white;
+}

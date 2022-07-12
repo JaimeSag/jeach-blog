@@ -3,8 +3,6 @@ import './styles.css';
 
 function FooterL(){
     return(
-        
-        
         <div id="footer">
             <div className="container">
                 <div className="row text-center text-xs-center text-sm-left text-md-left">
@@ -47,31 +45,6 @@ function FooterL(){
                             <li>
                                 <NavLink to="#">
                                     <i className="fa fa-angle-double-right"></i> Contacto</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="col-xs-12 col-sm-4 col-md-4">
-                        <h5>Quick links</h5>
-                        <ul className="list-unstyled quick-links">
-                            <li>
-                                <NavLink to="#">
-                                    <i className="fa fa-angle-double-right"></i>Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="#">
-                                    <i className="fa fa-angle-double-right"></i>About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="#">
-                                    <i className="fa fa-angle-double-right"></i>FAQ</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="#">
-                                    <i className="fNavLinkfa-angle-double-right"></i>Get Started</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="https://wwwe.sunlimetech.com" title="Design and developed by">
-                                    <i className="fa fa-angle-double-right"></i>Imprint</NavLink>
                             </li>
                         </ul>
                     </div>

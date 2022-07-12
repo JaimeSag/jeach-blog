@@ -1,0 +1,91 @@
+.grid-hero .entry-card {
+  border-radius: 15px;
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  color: #fff;
+  margin: 0.2rem;
+}
+
+.grid-hero .entry-card:hover img {
+  filter: grayscale(1);
+  transform: scale(1.2) rotate(5deg);
+}
+
+.grid-hero .entry-card:hover .body-card {
+  transform: translateY(-5px);
+}
+
+.grid-hero .entry-card .img-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-hero .entry-card .img-container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.grid-hero .entry-card .card-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  transition: 0.2s;
+}
+
+.grid-hero .entry-card .body-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  height: 100%;
+  transition: 0.2s;
+  z-index: 2;
+}
+
+.grid-hero .entry-card .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.entry-card .link-entry {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+}
+
+.cards-grid .entry-card {
+  position: relative;
+}
+
+.cards-grid .entry-card img {
+  object-fit: cover;
+  object-position: center;
+  height: 230px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.cards-grid .entry-card:hover img {
+  box-shadow: 0 50px 80px -20px rgb(0 0 0 / 40%);
+  transform: scale(1.03);
+}
+
+.cards-grid .entry-card h2 {
+  font-size: 24px;
+}
+
+.cards-grid .entry-card p {
+  display: none;
+}

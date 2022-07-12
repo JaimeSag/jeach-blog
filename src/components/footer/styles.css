@@ -1,5 +1,5 @@
 #footer {
-    background: url(../../assets/img/Footer.jpg) !important;
+    /* background: url(../../assets/img/Footer.jpg) !important; */
     background-position: center;
     background-size: cover;
     padding: 1rem 0;
@@ -11,11 +11,11 @@
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 #footer a {
-    color: #ffffff;
+    /* color: #ffffff; */
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
@@ -40,11 +40,11 @@
 
 #footer ul.social li a,
 #footer ul.quick-links li a {
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 #footer ul.social li a:hover {
-    color: #eeeeee;
+    /* color: #eeeeee; */
 }
 
 #footer ul.quick-links li {

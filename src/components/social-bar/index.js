@@ -1,3 +1,5 @@
+import './styles.css';
+
 function SocialBar() {
   return (
     <div className="social">

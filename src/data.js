@@ -2,22 +2,22 @@ export const blogItems = [
   {
     id: "number-1",
     num: "1",
-    title: "Title 1",
+    title: "Seven Shocking Facts About Music",
     category: "Música",
     category_path: "musica",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, veritatis saepe. Quia vero, optio odit debitis dolorem eveniet voluptatibus a.",
-    banner: "/assets/img/rand1.jpg",
+    banner: "/public_assets/img/rand1.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
   },
   {
     id: "number-2",
     num: "2",
-    title: "Title 2",
+    title: "Ten Ingenious Ways You Can Do With Music",
     category: "Música",
     category_path: "musica",
-    banner: "/assets/img/rand2.jpg",
+    banner: "/public_assets/img/rand2.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -26,10 +26,10 @@ export const blogItems = [
   {
     id: "number-3",
     num: "3",
-    title: "Title 3",
+    title: "5 Things Everyone Gets Wrong About Sport",
     category: "Deportes",
     category_path: "deportes",
-    banner: "/assets/img/rand3.jpg",
+    banner: "/public_assets/img/rand3.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -38,10 +38,10 @@ export const blogItems = [
   {
     id: "number-4",
     num: "4",
-    title: "Title 4",
+    title: "10 Things You Learned in Preschool That'll Help You With Sport",
     category: "Deportes",
     category_path: "deportes",
-    banner: "/assets/img/rand4.jpg",
+    banner: "/public_assets/img/rand4.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -50,10 +50,10 @@ export const blogItems = [
   {
     id: "number-5",
     num: "5",
-    title: "Title 5",
+    title: "15 Weird Hobbies That'll Make You Better at Entertainment",
     category: "Entretenimiento",
     category_path: "entretenimiento",
-    banner: "/assets/img/rand5.jpg",
+    banner: "/public_assets/img/rand5.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -62,10 +62,10 @@ export const blogItems = [
   {
     id: "number-6",
     num: "6",
-    title: "Title 6",
+    title: "30 Inspirational Quotes About Entertainment",
     category: "Otros",
     category_path: "otros",
-    banner: "/assets/img/rand6.jpg",
+    banner: "/public_assets/img/rand6.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -77,7 +77,7 @@ export const blogItems = [
     title: "Title 7",
     category: "Otros",
     category_path: "otros",
-    banner: "/assets/img/rand7.jpg",
+    banner: "/public_assets/img/rand7.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -89,7 +89,7 @@ export const blogItems = [
     title: "Title 8",
     category: "Noticias",
     category_path: "noticias",
-    banner: "/assets/img/rand8.jpg",
+    banner: "/public_assets/img/rand8.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -101,7 +101,7 @@ export const blogItems = [
     title: "Title 9",
     category: "Noticias",
     category_path: "noticias",
-    banner: "/assets/img/rand9.jpg",
+    banner: "/public_assets/img/rand9.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -113,7 +113,7 @@ export const blogItems = [
     title: "Title 10",
     category: "Noticias",
     category_path: "noticias",
-    banner: "/assets/img/rand10.jpg",
+    banner: "/public_assets/img/rand10.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -125,7 +125,7 @@ export const blogItems = [
     title: "Title 11",
     category: "Noticias",
     category_path: "noticias",
-    banner: "/assets/img/rand11.jpg",
+    banner: "/public_assets/img/rand11.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:
@@ -137,7 +137,7 @@ export const blogItems = [
     title: "Title 12",
     category: "Noticias",
     category_path: "noticias",
-    banner: "/assets/img/rand12.jpg",
+    banner: "/public_assets/img/rand12.jpg",
     author: "John Doe",
     date: "Jul 11, 2022",
     description:

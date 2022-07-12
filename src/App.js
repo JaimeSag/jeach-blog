@@ -2,20 +2,17 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import NavBar from "./components/navbar";
-import SocialBar from "./components/social-bar";
 import Home from "./pages/home";
 import Blog from "./components/blog";
 import Banner from "./components/banner";
 import { blogItems } from "./data";
 import FooterL from "./components/footer";
 import CategoryFilter from "./pages/category-filter";
-
+import Subscribe from "./components/subscribe";
 
 function App() {
   return (
     <div className="App">
-      <SocialBar />
-
       <BrowserRouter>
         <Banner />
         <NavBar />
@@ -38,6 +35,9 @@ function App() {
 
             <Route path="*" element={<Navigate replace to="/" />}></Route>
         </Routes>
+        <div className="divider-wrap"></div>
+        <Subscribe />
+        <div className="divider-wrap"></div>
         <FooterL />
       </BrowserRouter>
     </div>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams, useRoutes } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { blogItems } from "../../data";
-import  Backaground  from "../../assets/img/Footer.jpg"
+import  Backaground  from "../../assets/img/Footer.jpg";
+import './styles.css';
 
 const initialState = {
   title: "JEACH",
@@ -19,7 +20,7 @@ function Banner() {
   useEffect(() => {
     let searchBlog = blogItems.find((blog) => blog.id === lastPath);
     searchBlog ? setBlog(searchBlog) : setBlog(initialState);
-  }, [location]);
+  }, [location, lastPath]);
 
   return (
     <div className="banner" style={{backgroundImage: `url(${blog.banner})`}}>
