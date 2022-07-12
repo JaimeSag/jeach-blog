@@ -9,7 +9,7 @@ function CategoryFilter({blogs}){
     const path = loc.pathname.replace("/", "");
   
     useEffect(() => {
-        let blop = blogs.filter((blogs) => blogs.category === path);
+        let blop = blogs.filter((blogs) => blogs.category_path === path);
         if (blop) setBlogsx(blop);
         document.title = `${path} Archives`;
     }, [loc]);

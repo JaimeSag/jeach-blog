@@ -27,6 +27,7 @@ function Blog() {
         {blog ? (
           <>
             <h1>{blog.title}</h1>
+            <div className="span-info"><span className="category">{blog.category}</span><span>{blog.date}</span></div>
             <p>{blog.description}</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -38,10 +39,13 @@ function Blog() {
           </>
         ) : null}
       </main>
-      <aside className="widget-area">
-          {blog ? (blog.relates.map((element, index) => (
-            <EntryCard blog={element} key={index} />
+      <div className="divider-wrap"></div>
+      <aside>
+        <h2>Related posts</h2>
+        <div className="cards-grid">
+          {blog ? (blog.relates.map((element, index) => ( element.id != id ? <EntryCard blog={element} key={index} /> : ''
           ))) : '' }
+          </div>
       </aside>
     </div>
   );

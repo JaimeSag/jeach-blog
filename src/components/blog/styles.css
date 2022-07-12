@@ -1,9 +1,9 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+.blog {
+  font-size: 18px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.widget-area{
-    display: flex;
-    flex-direction: column;
+.blog h1 {
+  font-size: 56px;
 }
