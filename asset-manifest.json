@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/jeach-blog/static/css/main.5bcfa588.css",
+    "main.js": "/jeach-blog/static/js/main.01e5b0c3.js",
+    "static/js/787.81cd1b50.chunk.js": "/jeach-blog/static/js/787.81cd1b50.chunk.js",
+    "static/media/Footer.jpg": "/jeach-blog/static/media/Footer.68842731eb704e046d32.jpg",
+    "static/media/logo.svg": "/jeach-blog/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/jeach-blog/index.html",
+    "main.5bcfa588.css.map": "/jeach-blog/static/css/main.5bcfa588.css.map",
+    "main.01e5b0c3.js.map": "/jeach-blog/static/js/main.01e5b0c3.js.map",
+    "787.81cd1b50.chunk.js.map": "/jeach-blog/static/js/787.81cd1b50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bcfa588.css",
+    "static/js/main.01e5b0c3.js"
+  ]
+}
