@@ -23,7 +23,7 @@ function EntryCard({ blog }) {
         <p className="description">
           {description.length > 50 ? `${description.slice(0, 50)}... ` : ``}
         </p>
-        <Link to={`/${blog.category_path}/${blog.id}`} className="link-entry">
+        <Link to={`/${blog.category_path}/${blog.id}`} className="link-entry" aria-label="Link to blog">
           &nbsp;
         </Link>
       </div>

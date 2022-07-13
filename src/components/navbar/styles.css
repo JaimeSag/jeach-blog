@@ -1,5 +1,7 @@
 .navbar {
-  background-color: rgb(38, 41, 46);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #eee;
+  backdrop-filter: blur(10px);
   font-family: "Titillium Web", sans-serif;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
@@ -18,5 +20,9 @@
 }
 
 .navbar * {
-  color: white;
+  color: #555;
+}
+
+.nav-link.active {
+  font-weight: bold;
 }

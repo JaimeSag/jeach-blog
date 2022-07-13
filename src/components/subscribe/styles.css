@@ -1,12 +1,51 @@
 .subscribe.container {
-margin: 40px auto;
+  margin: 40px auto;
 }
+
 .subscribe-block {
-    background-color: #000;
-    border-radius: 15px;
-    color: #fff;
-    text-align: center;
-    padding: 40px 60px;
-    width: 60%;
-    margin: auto;
+  background-color: #000;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  padding: 40px 60px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.subscribe-block h2 {
+    color: white;
+}
+
+.subscribe-block input[type="email"] {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 8px;
+    width: 150px;
+    transition: .2s;
+    color: white;
+    border: 1px solid #fff;
+    margin: 0;
+    height: 3rem;
+}
+
+.subscribe-block input[type="email"]:focus-visible{
+  width: 200px;
+  outline: unset;
+}
+
+.subscribe-block input[type="submit"] {
+  height: 3rem;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 0 8px;
+  margin: 0;
+}
+
+@media (max-width: 667px) {
+  .subscribe-block{
+    padding: 40px 10px;
+  }
 }

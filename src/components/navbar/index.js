@@ -1,42 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
+import { navLinks } from "../../navLinks";
+import logo from "../../logo.svg"
 import './styles.css';
-
-const navLinks = [
-  {
-    title: "Noticias",
-    path: "/noticias",
-  },
-  {
-    title: "Música",
-    path: "/musica",
-  },
-  {
-    title: "Deportes",
-    path: "/deportes",
-  },
-  {
-    title: "Entretenimiento",
-    path: "/entretenimiento",
-  },
-  {
-    title: "Otros",
-    path: "/otros",
-  },
-];
 
 function NavBar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light mb-3" id="menu">
+      <nav className="navbar navbar-expand-lg navbar-light" id="menu">
         <Link className="navbar-brand" href="#" to="/">
           <img
-            src=""
+            src={logo}
             width="30"
             height="30"
             className="d-inline-block align-top"
             alt=""
           />{" "}
-          Name
+          Blog
         </Link>
         <button
           className="navbar-toggler"

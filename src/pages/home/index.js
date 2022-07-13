@@ -6,14 +6,13 @@ function Home({ blogs }) {
 
   useEffect(() => {
     setBlogsx(blogs)
-    document.title = `Blog | Noticias, música, entretenimiento y más`;
+    document.title = `Blog | News, music, sports...`;
   }, [blogs]);
 
   return (
     <div>
       <div className="container">
-        <h1>Home</h1>
-        <div className="grid-hero">
+        <div className="grid-hero mt-5">
           {blogsx.slice(0,3).map((element, index) => ( <EntryCard blog={element} key={index} /> ))}
         </div>
         <div className="divider-wrap"></div>
