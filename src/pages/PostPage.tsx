@@ -17,7 +17,7 @@ export function PostPage() {
   if (!post) return <NotFoundPage />;
 
   return (
-    <main className="pt-20 md:pt-40">
+    <>
       <article>
         <PostHeader post={post} />
 
@@ -46,6 +46,6 @@ export function PostPage() {
       <PostNavigation prevPost={previousPost} nextPost={nextPost} />
 
       <RelatedPosts posts={relatedPosts} />
-    </main>
+    </>
   );
 }
