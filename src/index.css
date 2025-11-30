@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.99 0.005 85);
+  --card: oklch(0.995 0.003 85);
+  --secondary: oklch(0.95 0.01 85);
+  --border: oklch(0.90 0.01 85);
+  --foreground: oklch(0.25 0.02 50);
+  --muted-foreground: oklch(0.50 0.03 50);
+  --secondary-subtle: oklch(0.90 0.01 85);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+  --background: oklch(0.14 0.01 85);
+  --card: oklch(0.17 0.01 85);
+  --secondary: oklch(0.15 0.01 85);
+  --secondary-subtle: oklch(0.165 0.01 85);
+  --border: oklch(0.26 0.02 85);
+  --foreground: oklch(0.98 0.005 85);
+  --muted-foreground: oklch(0.65 0.02 85);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-secondary: var(--secondary);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-subtle: var(--secondary-subtle);
+
+  --font-serif: "Averia Serif Libre", serif;
+  --font-sans: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
 }
