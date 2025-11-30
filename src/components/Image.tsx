@@ -1,4 +1,4 @@
-import { ImgHTMLAttributes, useState } from "react";
+import { ImgHTMLAttributes, useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
 export function Image({
@@ -11,8 +11,13 @@ export function Image({
   const [error, setError] = useState(false);
   const imageSrc = src || "/assets/img/default.jpg";
 
+  useEffect(() => {
+    setError(false);
+  }, [src]);
+
   return (
     <img
+      key={src}
       className={cn((error || !src) && "opacity-30 dark:opacity-10", className)}
       src={imageSrc}
       onError={(e) => {
