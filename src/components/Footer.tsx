@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CATEGORIES, SOCIALS } from "../constants";
 import { Container } from "./Container";
 
@@ -32,12 +32,12 @@ export function Footer() {
               <ul className="text-muted-foreground flex flex-col gap-2 text-sm md:text-xs">
                 {CATEGORIES.map((element, index) => (
                   <li key={index}>
-                    <NavLink
+                    <Link
                       className="hover:text-foreground duration-200"
                       to={`/category/${element.slug}`}
                     >
                       {element.name}
-                    </NavLink>
+                    </Link>
                   </li>
                 ))}
               </ul>
