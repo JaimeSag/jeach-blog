@@ -1,0 +1,34 @@
+import DEFAULT_FALLBACK from "../../assets/img/default.jpg";
+import { Author } from "../../types";
+
+export function PostAuthorBio({ author }: { author: Author }) {
+  return (
+    <section aria-labelledby="author-bio-heading" className="py-8">
+      <div className="flex items-center gap-4">
+        <div className="bg-muted size-16 shrink-0 overflow-hidden rounded-full">
+          <img
+            src={author.profile_image || DEFAULT_FALLBACK}
+            className="size-full object-cover"
+            alt={`Profile image of ${author.name}`}
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <span className="text-muted-foreground text-sm font-medium">
+            About the Author
+          </span>
+          <h3
+            id="author-bio-heading"
+            className="text-foreground font-serif text-2xl font-semibold"
+          >
+            {author.name}
+          </h3>
+        </div>
+      </div>
+
+      <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+        {author.bio}
+      </p>
+    </section>
+  );
+}
