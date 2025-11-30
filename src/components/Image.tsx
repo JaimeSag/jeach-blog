@@ -1,5 +1,4 @@
 import { ImgHTMLAttributes } from "react";
-import DEFAULT_FALLBACK from "../assets/img/default.jpg";
 
 export function Image({
   src,
@@ -7,14 +6,14 @@ export function Image({
   decoding = "auto",
   ...props
 }: ImgHTMLAttributes<HTMLImageElement>) {
-  const imageSrc = src || DEFAULT_FALLBACK;
+  const imageSrc = src || "/assets/img/default.jpg";
 
   return (
     <img
       src={imageSrc}
       onError={(e) => {
         e.currentTarget.onerror = null;
-        e.currentTarget.src = DEFAULT_FALLBACK;
+        e.currentTarget.src = "/assets/img/default.jpg";
       }}
       loading={loading}
       decoding={decoding}

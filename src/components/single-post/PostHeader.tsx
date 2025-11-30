@@ -1,4 +1,3 @@
-import DEFAULT_FALLBACK from "../../assets/img/default.jpg";
 import { useParallax } from "../../hooks/useParallax";
 import { formatDate } from "../../lib/utils";
 import { ShortPost } from "../../types";
@@ -26,7 +25,7 @@ export function PostHeader({ post }: { post: ShortPost }) {
               <div className="flex items-center gap-2.5">
                 <div className="size-11 overflow-hidden rounded-full">
                   <img
-                    src={post.author.profile_image || DEFAULT_FALLBACK}
+                    src={post.author.profile_image || "/assets/img/default.jpg"}
                     className="pointer-events-none size-full object-cover select-none"
                     alt=""
                     aria-hidden="true"
