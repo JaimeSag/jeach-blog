@@ -17,7 +17,7 @@ export function PostFeaturedImage({
       <figure className="bg-card/50 border-border mx-auto h-100 max-w-360 rounded-3xl border p-3 shadow-[0_12px_42px_#0000000d] backdrop-blur-sm md:h-150 md:p-4">
         <div
           className={cn(
-            "relative size-full w-full overflow-hidden rounded-xl",
+            "bg-card relative size-full w-full overflow-hidden rounded-xl",
             caption &&
             "before:absolute before:bottom-0 before:left-0 before:z-1 before:h-1/2 before:w-full before:bg-linear-to-t before:from-black/40 before:to-transparent before:to-50% before:brightness-90 before:contrast-75 before:content-['']",
           )}
