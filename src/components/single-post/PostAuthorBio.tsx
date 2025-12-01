@@ -2,7 +2,7 @@ import { Author } from "../../types";
 
 export function PostAuthorBio({ author }: { author: Author }) {
   return (
-    <section aria-labelledby="author-bio-heading" className="py-8">
+    <section aria-labelledby="author-bio-heading">
       <div className="flex items-center gap-4">
         <div className="bg-muted size-16 shrink-0 overflow-hidden rounded-full">
           <img
