@@ -14,8 +14,6 @@ export function useCategoryData() {
 
     const allPosts = POSTS.filter((post) => post.category.slug === slug);
 
-    console.log(allPosts.length);
-
     const [featuredPost, ...otherPosts] = allPosts;
 
     return {
