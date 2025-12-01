@@ -1,7 +1,10 @@
 import { useMemo } from "react";
+import { useParams } from "react-router-dom";
 import { POSTS } from "../constants";
 
-export function usePostData(slug?: string) {
+export function usePostData() {
+  const { slug } = useParams();
+
   return useMemo(() => {
     const index = POSTS.findIndex((post) => post.slug === slug);
 
