@@ -1,6 +1,6 @@
 import { ShortPost } from "../../types";
+import { Card } from "../card/Card";
 import { Container } from "./../Container";
-import { PostCard } from "./../EntryCard";
 
 export function RelatedPosts({ posts }: { posts: ShortPost[] }) {
   return (
@@ -15,7 +15,7 @@ export function RelatedPosts({ posts }: { posts: ShortPost[] }) {
           </h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
             {posts.map((post) => (
-              <PostCard variant="standard" key={post.id} post={post} />
+              <Card key={post.id} post={post} />
             ))}
           </div>
         </div>
