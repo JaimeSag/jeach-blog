@@ -1,6 +1,6 @@
-import { CategoryFeaturedSection } from "../components/category/CategoryFeaturedSection";
 import { CategoryHeader } from "../components/category/CategoryHeader";
 import { CategoryListSection } from "../components/category/CategoryListSection";
+import { FeaturedSection } from "../components/FeaturedSection";
 import { useCategoryData } from "../hooks/useCategoryData";
 import { NotFoundPage } from "./NotFoundPage";
 
@@ -16,7 +16,7 @@ export function CategoryPage() {
         description={category.description}
       />
 
-      <CategoryFeaturedSection post={featuredPost} />
+      <FeaturedSection post={featuredPost} />
 
       <CategoryListSection posts={otherPosts} />
     </>
