@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Container } from "./components/Container";
 import { Footer } from "./components/Footer";
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./components/navbar/NavBar";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SubscribeForm } from "./components/SubscribeForm";
 import { CategoryPage } from "./pages/CategoryPage";
