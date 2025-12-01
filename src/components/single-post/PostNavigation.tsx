@@ -36,7 +36,7 @@ export function PostNavigation({ prevPost, nextPost }: PostNavigationProps) {
   if (!prevPost && !nextPost) return null;
 
   return (
-    <nav className="py-12" aria-label="Navigation between articles">
+    <nav className="pb-12" aria-label="Navigation between articles">
       <Container>
         <div className="mx-auto grid max-w-120 grid-cols-1 gap-3 [grid-template-areas:'prev''next'] md:max-w-160 md:grid-cols-2 md:[grid-template-areas:'prev_next']">
           {prevPost && (
