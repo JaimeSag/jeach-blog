@@ -1,54 +1,42 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
-
-import { Fragment } from "react";
-import Banner from "./components/banner";
-import Blog from "./components/blog";
-import FooterL from "./components/footer";
-import NavBar from "./components/navbar";
-import Subscribe from "./components/subscribe";
-import { blogItems } from "./data";
-import { navLinks } from "./navLinks";
-import CategoryFilter from "./pages/category-filter";
-import Home from "./pages/home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Container } from "./components/Container";
+import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { SubscribeForm } from "./components/SubscribeForm";
+import { CategoryPage } from "./pages/CategoryPage";
+import { HomePage } from "./pages/Home";
+import { NotFoundPage } from "./pages/NotFoundPage";
+import { PostPage } from "./pages/PostPage";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="relative before:pointer-events-none before:absolute before:inset-0 before:z-20 before:bg-[url(/assets/img/grain.jpg)] before:opacity-20 before:mix-blend-multiply before:content-[''] before:select-none dark:before:opacity-50">
         <NavBar />
-        <Banner />
-        <Routes>
-          <Route index
-            element={<Home blogs={blogItems} />}
-          />
 
-          {navLinks.map((element, index) => (
-            <Fragment key={index}>
-              <Route exact
-                path={element.path.replace("/", "")}
-                element={<CategoryFilter blogs={blogItems} />}
-              />
-              <Route path={`${element.path.replace("/", "")}/:id`}
-                element={<Blog />}
-              />
-            </Fragment>
-          ))}
+        <main className="pt-20 md:pt-40">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/post/:slug" element={<PostPage />} />
+            <Route path="/category/:slug" element={<CategoryPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
 
-          <Route path="*"
-            element={<Navigate replace
-              to="/"
-            />}
-          >
-          </Route>
-        </Routes>
+        <section className="from-secondary bg-linear-to-b from-50% to-transparent to-50%">
+          <Container>
+            <div className="py-38">
+              <SubscribeForm />
+            </div>
+          </Container>
+        </section>
 
-        <div className="divider-wrap"></div>
-        <Subscribe />
-        <div className="divider-wrap"></div>
-        <FooterL />
-      </BrowserRouter>
-    </div>
+        <Footer />
+
+        <ScrollToTop />
+      </div>
+    </BrowserRouter>
   );
 }
 
