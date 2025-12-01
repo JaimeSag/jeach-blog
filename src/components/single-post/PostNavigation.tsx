@@ -8,12 +8,12 @@ import { Image } from "../Image";
 import { Container } from "./../Container";
 
 const navCardVariants = cva(
-  "group bg-card border-border relative flex gap-3 rounded-2xl border p-3 xl:flex-1 transition-colors h-29",
+  "group bg-card border-border relative flex h-29 gap-3 rounded-2xl border p-3 transition-colors xl:flex-1",
   {
     variants: {
       variant: {
-        prev: "[grid-area:prev] flex-row",
-        next: "[grid-area:next] flex-row-reverse",
+        prev: "flex-row [grid-area:prev]",
+        next: "flex-row-reverse [grid-area:next]",
       },
     },
     defaultVariants: {
