@@ -80,7 +80,7 @@ export function SubscribeForm() {
 
             <button
               type="submit"
-              className="bg-border text-background dark:bg-secondary-subtle dark:text-muted-foreground group absolute top-1 right-1 bottom-1 z-10 flex cursor-pointer items-center justify-center overflow-hidden rounded-full px-4 transition-all duration-300 active:scale-99"
+              className="bg-border text-background dark:bg-secondary-subtle dark:text-muted-foreground group absolute top-1 right-1 bottom-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-full px-4 transition-all duration-300 active:scale-99"
             >
               <span className="bg-foreground dark:bg-border absolute inset-0 h-full w-full rounded-full transition-transform duration-300 ease-in-out group-hover:translate-x-full"></span>
 
