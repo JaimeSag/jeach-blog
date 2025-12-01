@@ -1,10 +1,12 @@
-import './styles.css'
+import "./styles.css";
 function Template1() {
   return (
-    <div className="template">
-      <p>Feugiat in ante metus dictum. Leo vel orci porta non pulvinar.
-        Nunc consequat interdum varius sit amet mattis vulputate enim. Enim
-        blandit volutpat maecenas volutpat blandit aliquam.</p>
+    <div className="template [&>p]:my-[1lh]">
+      <p>
+        Feugiat in ante metus dictum. Leo vel orci porta non pulvinar. Nunc
+        consequat interdum varius sit amet mattis vulputate enim. Enim blandit
+        volutpat maecenas volutpat blandit aliquam.
+      </p>
       <h2>Orci phasellus egestas tellus rutrum tellus</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -34,10 +36,17 @@ function Template1() {
         semper feugiat nibh sed.
       </p>
       <figure>
-        <img src={`https://picsum.photos/1200/300?random=${Math.random()*100}`} alt="" />
-        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+        <img
+          src={`https://picsum.photos/1200/300?random`}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </figcaption>
       </figure>
-      
+
       <h2>
         Id ornare arcu odio ut sem nulla pharetra diam sit. Tincidunt vitae
         semper quis lectus
@@ -52,13 +61,18 @@ function Template1() {
         posuere morbi. Eleifend donec pretium vulputate sapien nec. Condimentum
         lacinia quis vel eros donec ac odio tempor.
       </p>
-      <blockquote>Proin sed libero enim sed faucibus. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Fermentum et sollicitudin ac orci</blockquote>
+      <blockquote>
+        Proin sed libero enim sed faucibus. Diam volutpat commodo sed egestas
+        egestas fringilla phasellus faucibus scelerisque. Fermentum et
+        sollicitudin ac orci
+      </blockquote>
       <p>
-        Leo vel orci porta non pulvinar. Nunc consequat interdum varius sit amet mattis vulputate enim. Enim
-        blandit volutpat maecenas volutpat blandit aliquam. Donec massa sapien
-        faucibus et molestie ac feugiat sed lectus. Maecenas pharetra convallis
-        posuere morbi. Eleifend donec pretium vulputate sapien nec. Condimentum
-        lacinia quis vel eros donec ac odio tempor.
+        Leo vel orci porta non pulvinar. Nunc consequat interdum varius sit amet
+        mattis vulputate enim. Enim blandit volutpat maecenas volutpat blandit
+        aliquam. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
+        Maecenas pharetra convallis posuere morbi. Eleifend donec pretium
+        vulputate sapien nec. Condimentum lacinia quis vel eros donec ac odio
+        tempor.
       </p>
     </div>
   );
