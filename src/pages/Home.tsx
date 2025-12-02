@@ -2,9 +2,14 @@ import { Card } from "../components/card/Card";
 import { Container } from "../components/Container";
 import { FeaturedSection } from "../components/FeaturedSection";
 import { usePostsData } from "../hooks/usePostsData";
+import { useSeo } from "../hooks/useSeo";
 
 export function HomePage() {
   const { featuredPost, visiblePosts, hasMore, loadMore } = usePostsData();
+  useSeo({
+    title: "Home - Fusion Blog",
+    description: "Stay updated with the latest news, articles, and insights from Fusion Blog.",
+  });
 
   return (
     <>
@@ -17,13 +22,18 @@ export function HomePage() {
         aria-labelledby="latest-posts-heading"
       >
         <Container>
-          <h2 id="latest-posts-heading" className="sr-only">
+          <h2 id="latest-posts-heading"
+            className="sr-only"
+          >
             Latest Posts
           </h2>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
-            {visiblePosts.map((post) => (
-              <Card key={post.id} variant="standard" post={post} />
+            {visiblePosts.map(post => (
+              <Card key={post.id}
+                variant="standard"
+                post={post}
+              />
             ))}
           </div>
 
