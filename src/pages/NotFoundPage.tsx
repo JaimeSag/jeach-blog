@@ -1,6 +1,12 @@
 import { Container } from "../components/Container";
+import { useSeo } from "../hooks/useSeo";
 
 export function NotFoundPage() {
+  useSeo({
+    title: "404 Not Found - Fusion Blog",
+    description: "The page you are looking for does not exist.",
+  });
+
   return (
     <Container>
       <div className="mx-auto flex min-h-screen max-w-90 flex-col justify-center">
