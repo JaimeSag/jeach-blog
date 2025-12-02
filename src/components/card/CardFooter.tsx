@@ -36,7 +36,7 @@ export function CardFooter({
         {showAuthorImage && (
           <div className="hidden size-11 overflow-hidden rounded-full md:block">
             <Image
-              src={author.profile_image || "/assets/img/default.jpg"}
+              src={author.profile_image || `${import.meta.env.BASE_URL}/assets/img/default.jpg`}
               className="size-full object-cover"
               alt=""
               aria-hidden="true"

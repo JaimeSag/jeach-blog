@@ -9,7 +9,7 @@ export function Image({
   ...props
 }: ImgHTMLAttributes<HTMLImageElement>) {
   const [error, setError] = useState(false);
-  const imageSrc = src || "/assets/img/default.jpg";
+  const imageSrc = src || `${import.meta.env.BASE_URL}/assets/img/default.jpg`;
 
   useEffect(() => {
     setError(false);
@@ -20,9 +20,9 @@ export function Image({
       key={src}
       className={cn((error || !src) && "opacity-30 dark:opacity-10", className)}
       src={imageSrc}
-      onError={(e) => {
+      onError={e => {
         e.currentTarget.onerror = null;
-        e.currentTarget.src = "/assets/img/default.jpg";
+        e.currentTarget.src = `${import.meta.env.BASE_URL}/assets/img/default.jpg`;
         setError(true);
       }}
       loading={loading}

@@ -6,7 +6,7 @@ export function PostAuthorBio({ author }: { author: Author }) {
       <div className="flex items-center gap-4">
         <div className="bg-muted size-16 shrink-0 overflow-hidden rounded-full">
           <img
-            src={author.profile_image || "/assets/img/default.jpg"}
+            src={author.profile_image || `${import.meta.env.BASE_URL}/assets/img/default.jpg`}
             className="size-full object-cover"
             alt={`Profile image of ${author.name}`}
           />

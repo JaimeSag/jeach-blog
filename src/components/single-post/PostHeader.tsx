@@ -8,7 +8,9 @@ export function PostHeader({ post }: { post: ShortPost }) {
   const { display, dateTime } = formatDate(post.published_at);
 
   return (
-    <header ref={headerRef} className="relative -z-1">
+    <header ref={headerRef}
+      className="relative -z-1"
+    >
       <Container>
         <div className="mx-auto max-w-120 py-18 md:max-w-160">
           <h1 className="mb-6 text-2xl font-semibold md:text-4xl">
@@ -18,14 +20,16 @@ export function PostHeader({ post }: { post: ShortPost }) {
             {post.excerpt}
           </p>
 
-          <hr className="border-border my-6 h-px w-full" aria-hidden="true" />
+          <hr className="border-border my-6 h-px w-full"
+            aria-hidden="true"
+          />
 
           <ul className="flex items-center justify-between">
             <li>
               <div className="flex items-center gap-2.5">
                 <div className="size-11 overflow-hidden rounded-full">
                   <img
-                    src={post.author.profile_image || "/assets/img/default.jpg"}
+                    src={post.author.profile_image || `${import.meta.env.BASE_URL}/assets/img/default.jpg`}
                     className="pointer-events-none size-full object-cover select-none"
                     alt=""
                     aria-hidden="true"
